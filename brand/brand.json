@@ -1,0 +1,35 @@
+{
+  "name": "Default",
+  "layout": "track",
+  "caption": {
+    "font": "Arial Black",
+    "size": 80,
+    "color": "#FFFFFF",
+    "highlight": "#FFD400",
+    "outline_color": "#000000",
+    "outline": 6,
+    "shadow": 0,
+    "uppercase": true,
+    "max_words": 3,
+    "max_chars": 18,
+    "margin_v": 560
+  },
+  "hook": {
+    "enabled": true,
+    "font": "Arial Black",
+    "size": 72,
+    "color": "#FFFFFF",
+    "box_color": "#000000",
+    "duration": 3.0,
+    "margin_v": 230
+  },
+  "logo": {
+    "file": "brand/logo.png",
+    "width": 170,
+    "position": "top-right",
+    "margin": 48,
+    "opacity": 0.9
+  },
+  "output": { "width": 1080, "height": 1920, "fps": 30 },
+  "qc": { "min_sec": 15, "max_sec": 90, "target_lufs": -14 }
+}

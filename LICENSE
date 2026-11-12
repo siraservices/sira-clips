@@ -1,0 +1,23 @@
+Sira Clips Free Business License
+Copyright (c) 2026 Aira Development LLC (d/b/a Sira). All rights reserved.
+
+You may install, use and modify this toolkit to create video content for your
+own business or personal brand, including on multiple computers inside your
+organization.
+
+You may NOT, without written permission from Aira Development LLC:
+  - sell, sublicense, or redistribute this toolkit or modified versions of it;
+  - offer clipping, editing, or installation services to third parties
+    using this toolkit.
+
+Third-party components installed by setup.ps1 (ffmpeg, Python packages such as
+faster-whisper and OpenCV, the YuNet face-detection model and Whisper speech
+models) are not part of this toolkit and are governed by their own licenses.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+Questions or commercial licensing: hello@sira.services
