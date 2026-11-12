@@ -34,6 +34,20 @@ def all_words(transcript):
     return [dict(w, seg=s["id"]) for s in transcript["segments"] for w in s["words"]]
 
 
+def apply_corrections(words, corrections):
+    """Fix misheard words in captions, e.g. {"Cyber": "Sira"}. Case-insensitive, keeps punctuation."""
+    if not corrections:
+        return words
+    import re
+    low = {k.lower(): v for k, v in corrections.items()}
+    out = []
+    for w in words:
+        m = re.match(r"^(\W*)(.*?)([.,!?;:\"']*)$", w["w"])
+        rep = low.get(m.group(2).lower()) if m else None
+        out.append(dict(w, w=m.group(1) + rep + m.group(3)) if rep else w)
+    return out
+
+
 def snap_bounds(words, start, end, duration):
     """Move cut points to word boundaries so clips never start/end mid-word."""
     first = next((w for w in words if w["s"] >= start - 0.4), None)
@@ -331,7 +345,7 @@ def main():
     brand, _ = load_brand(a.brand or plan.get("brand"))
     src = Path(plan.get("source") or transcript["video"])
     info = video_info(src)
-    words = all_words(transcript)
+    words = apply_corrections(all_words(transcript), plan.get("corrections"))
     outdir = OUTPUT / workdir.name
     outdir.mkdir(parents=True, exist_ok=True)
 

@@ -37,6 +37,7 @@ Write `work\<video>\clips.json`:
 - `hook` is optional. Omit it if the user doesn't want on-screen titles.
 - `layout`: use `track` for talking heads (follows the speaker's face) and `fit` for screen shares, slides or wide multi-person shots (full frame over a blurred fill).
 - Use `"brand": "brand/<client>.json"` at the top level for a non-default client brand.
+- Check the transcript for misheard names (brands, people, URLs). Fix them in the captions with a top-level `"corrections": {"Cyber": "Sira", "sara.services": "sira.services"}` (whole words, case-insensitive).
 
 ## 3. Render
 ```
