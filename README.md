@@ -1,5 +1,7 @@
 # Sira Clips: the Windows vibe-editing toolkit
 
+![Sira Clips](docs/cover.png)
+
 Turn one long video (a podcast, interview, webinar, Q&A or livestream) into vertical, captioned, on-brand short clips. You describe the clips you want in plain English, and Claude does the rest.
 
 > "Make 5 clips from inbox\chef-interview.mp4 about our catering, 30–45 seconds each."
