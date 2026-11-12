@@ -263,8 +263,8 @@ def loudnorm_filter(src, start, dur, target):
 
 def encode(cmd_base, out, workdir):
     encoders = [
-        ["-c:v", "h264_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", "21", "-b:v", "0"],
-        ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20"],
+        ["-c:v", "h264_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", "23", "-b:v", "0", "-maxrate", "6M", "-bufsize", "12M"],
+        ["-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "6M", "-bufsize", "12M"],
     ]
     last = None
     for enc in encoders:
